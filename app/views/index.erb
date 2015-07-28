@@ -1,9 +1,19 @@
 <div class="container">
-  <h1>Show a list of anagrams for "chicken"</h1>
-  <p>Here we go!</p>
-  <% @anagrams.each do |x| %>
-    <%= x %>
-    <br>
-    <% end %>
-  <br>
+  <h1>Welcome, We list the anagrams for you!</h1>
+  <p>Here we go! Type your word</p>
+
+  <form action='/search_anagrams' method='post' >
+      <input type="text" name="user_input" placeholder="Enter word"></input>
+      <input type="submit" value="Submit"></input>
+  </form>
+
+  <h3>Here you go for the list!</h3>
+  <div class="anagrams">
+    <%if @anagrams%>
+    <% @anagrams.each do |word|%>
+    <p><%=word%></p>
+    <%end%>
+    <%end%>
+  </div>
+
 </div>

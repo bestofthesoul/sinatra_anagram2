@@ -16,8 +16,6 @@ class Word< ActiveRecord::Base
       end
     result
   end
-  # Remember to create a migration!
+
 end
 
-p Word.anagrams("chicken",["chikcen ","hello"])
-# p a = Word.pluck(:word)
